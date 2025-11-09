@@ -1,0 +1,35 @@
+{
+    "name": "SubFinder",
+    "version": "1.0.0",
+    "description": "Adds a button to Anime, Movie, and TV database websites that opens a relevant subtitle search on subdl or subsource",
+    "manifest_version": 3,
+
+    "background": { "service_worker": "background.js" },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.myanimelist.net/*",
+                "*://*.anilist.co/*",
+                "*://*.kitsu.app/*",
+                "*://*.anime-planet.com/*",
+                "*://*.animenewsnetwork.com/encyclopedia/*",
+                "*://*.anidb.net/*",
+                "*://*.livechart.me/*",
+                "*://*.imdb.com/*",
+                "*://*.themoviedb.org/*",
+                "*://*.thetvdb.com/*",
+                "*://*.trakt.tv/*"
+            ],
+            "js": ["main.js"]
+        }
+    ],
+
+    "permissions": ["storage", "scripting", "tabs"],
+    "host_permissions": ["https://www.omdbapi.com/*"],
+    "action": { "default_popup": "popup/popup.html" },
+    "icons": { 
+        "128": "assets/icon-128.png", 
+        "48": "assets/icon-48.png", 
+        "16": "assets/icon-16.png" 
+    }
+}

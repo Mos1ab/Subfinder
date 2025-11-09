@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="popup.css" />
+        <script src="popup.js" defer></script>
+        <title>SubFinder Settings</title>
+    </head>
+
+    <body>
+        <div id="settings">
+            <label for="site_select">Subtitle Site:</label>
+            <select id="site_select">
+                <option value="subdl">subdl.com</option>
+                <option value="subsource">subsource.net</option>
+            </select>
+
+            <label for="omdb_api_key">OMDb API Key:</label>
+            <input type="text" id="omdb_api_key" placeholder="Enter your OMDb API key">
+        </div>
+        <div id="bottomButtons">
+            <button id="saveButton">Save</button>
+        </div>
+        <p id="credits">Credits: mos1b</p>
+    </body>
+</html>

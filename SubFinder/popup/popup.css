@@ -1,0 +1,77 @@
+:root {
+    --clrDark: hsl(0, 0%, 0%);
+    --clrLight: hsl(0, 0%, 100%);
+    --clrAccent: hsl(0, 0%, 85%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(--clrDark);
+    color: var(--clrLight);
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#settings {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: var(--clrLight);
+}
+
+select,
+input {
+    padding: 10px;
+    background: var(--clrDark);
+    color: var(--clrLight);
+    border: 1px solid var(--clrAccent);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+select:focus,
+input:focus {
+    outline: none;
+    border-color: var(--clrLight);
+}
+
+#bottomButtons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#credits {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--clrAccent);
+}
+
+#saveButton {
+    padding: 10px 20px;
+    background: var(--clrAccent);
+    color: var(--clrDark);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#saveButton:hover {
+    background: var(--clrLight);
+}
